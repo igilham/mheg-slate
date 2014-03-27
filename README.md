@@ -1,4 +1,4 @@
 mheg-slate
 ==========
 
-A simple slate application in MHEG-5
+A simple interactive television slate application in MHEG-5.

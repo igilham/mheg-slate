@@ -1,20 +1,37 @@
+{:IntegerConst SCREEN_WIDTH :ConstValue 720}
+{:IntegerConst SCREEN_HEIGHT :ConstValue 576}
+
+{:OctetStringConst FONT_HEADING :ConstValue "plain.36.42.0"}
+{:OctetStringConst FONT_BODY :ConstValue "plain.26.26.0"}
+
+{:OctetStringConst COLOUR_BLACK :ConstValue '=00=00=00=00'}
+{:OctetStringConst COLOUR_WHITE :ConstValue '=FF=FF=FF=00'}
+
 {:Scene
-    ( "~/slate.mheg+" 0 )
+    ( "~/slate.asn" 0 )
     :Items
     (
         {:Rectangle rectBackground
-            :OrigBoxSize 720 576
+            :OrigBoxSize SCREEN_WIDTH SCREEN_HEIGHT
             :OrigPosition 0 0
-            :OrigRefLineColour '=ff=ff=ff=00'
-            :OrigRefFillColour '=ff=ff=ff=00'
+            :OrigRefLineColour COLOUR_BLACK
+            :OrigRefFillColour COLOUR_BLACK
         }
 
-        {:Text txtContent
+        {:Text txtHeading
             :OrigContent "Hello World!"
-            :OrigBoxSize 720 50
-            :OrigPosition 0 250
-            :FontAttributes "plain.36.42.0"
-            :TextColour '=ff=00=00=00'
+            :OrigBoxSize SCREEN_WIDTH 50
+            :OrigPosition 0 [SCREEN_HEIGHT / 3]
+            :FontAttributes FONT_HEADING
+            :TextColour COLOUR_WHITE
+        }
+        
+        {:Text txtExit
+            :OrigContent "Press RED to exit"
+            :OrigBoxSize SCREEN_WIDTH 30
+            :OrigPosition 0 [(SCREEN_HEIGHT / 3) + 60]
+            :FontAttributes FONT_BODY
+            :TextColour COLOUR_WHITE
         }
 
         // Press RED to quit
@@ -24,11 +41,11 @@
             :EventType UserInput
             :EventData KeyRed
             :LinkEffect (
-                :Quit ( ( '~/startup' 0 ) )
+                :Quit()
             )
         }
     )
     :InputEventReg 3
-    :SceneCS 720 576
+    :SceneCS SCREEN_WIDTH SCREEN_HEIGHT
 }
 
