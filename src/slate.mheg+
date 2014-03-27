@@ -1,11 +1,4 @@
-{:IntegerConst SCREEN_WIDTH :ConstValue 720}
-{:IntegerConst SCREEN_HEIGHT :ConstValue 576}
-
-{:OctetStringConst FONT_HEADING :ConstValue "plain.36.42.0"}
-{:OctetStringConst FONT_BODY :ConstValue "plain.26.26.0"}
-
-{:OctetStringConst COLOUR_BLACK :ConstValue '=00=00=00=00'}
-{:OctetStringConst COLOUR_WHITE :ConstValue '=FF=FF=FF=00'}
+import(constants.h.mheg+)
 
 {:Scene
     ( "~/slate.asn" 0 )
@@ -22,7 +15,7 @@
             :OrigContent "Hello World!"
             :OrigBoxSize SCREEN_WIDTH 50
             :OrigPosition 0 [SCREEN_HEIGHT / 3]
-            :FontAttributes FONT_HEADING
+            :FontAttributes FONT_ATTR_HEADING
             :TextColour COLOUR_WHITE
             :HJustification centre
         }
@@ -31,7 +24,7 @@
             :OrigContent "Press RED to exit"
             :OrigBoxSize SCREEN_WIDTH 30
             :OrigPosition 0 [(SCREEN_HEIGHT / 3) + 60]
-            :FontAttributes FONT_BODY
+            :FontAttributes FONT_ATTR_BODY
             :TextColour COLOUR_WHITE
             :HJustification centre
         }

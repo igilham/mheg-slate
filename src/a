@@ -1,21 +1,23 @@
 // application startup file
+
+import(constants.h.mheg+)
+
 {:Application
     ( '/a' 0 )
     :Items (
-        {:Link
-            1
+        {:Link lnkMain
             :EventSource 0          // Check this application...
             :EventType IsRunning    // ... for the IsRunning event
             :LinkEffect (
-                :TransitionTo (( '~/slate.asn' 0 ) )
+                :TransitionTo(( '~/slate.asn' 0 ) )
             )
         }
     )
     // basic defaults
-    :BackgroundColour '=00=00=00=00'
+    :BackgroundColour COLOUR_BLACK
     :TextCHook 10
-    :TextColour '=FF=FF=FF=00'
+    :TextColour COLOUR_WHITE
     :Font "rec://font/uk1"
-    :FontAttributes "plain.26.32.0"
+    :FontAttributes FONT_ATTR_BODY
 }
 

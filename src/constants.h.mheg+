@@ -1,0 +1,8 @@
+{:IntegerConst SCREEN_WIDTH :ConstValue 720}
+{:IntegerConst SCREEN_HEIGHT :ConstValue 576}
+
+{:OctetStringConst FONT_ATTR_HEADING :ConstValue "plain.36.42.0"}
+{:OctetStringConst FONT_ATTR_BODY :ConstValue "plain.26.32.0"}
+
+{:OctetStringConst COLOUR_BLACK :ConstValue '=00=00=00=00'}
+{:OctetStringConst COLOUR_WHITE :ConstValue '=FF=FF=FF=00'}
