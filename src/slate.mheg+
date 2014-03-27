@@ -1,0 +1,34 @@
+{:Scene
+    ( "~/slate.mheg+" 0 )
+    :Items
+    (
+        {:Rectangle rectBackground
+            :OrigBoxSize 720 576
+            :OrigPosition 0 0
+            :OrigRefLineColour '=ff=ff=ff=00'
+            :OrigRefFillColour '=ff=ff=ff=00'
+        }
+
+        {:Text txtContent
+            :OrigContent "Hello World!"
+            :OrigBoxSize 720 50
+            :OrigPosition 0 250
+            :FontAttributes "plain.36.42.0"
+            :TextColour '=ff=00=00=00'
+        }
+
+        // Press RED to quit
+        {:Link
+            lnkKeyBlue
+            :EventSource 0
+            :EventType UserInput
+            :EventData KeyRed
+            :LinkEffect (
+                :Quit ( ( '~/startup' 0 ) )
+            )
+        }
+    )
+    :InputEventReg 3
+    :SceneCS 720 576
+}
+

@@ -1,0 +1,21 @@
+// application startup file
+{:Application
+    ( '/a' 0 )
+    :Items (
+        {:Link
+            1
+            :EventSource 0          // Check this application...
+            :EventType IsRunning    // ... for the IsRunning event
+            :LinkEffect (
+                :TransitionTo (( '~/slate.mheg+' 0 ) )
+            )
+        }
+    )
+    // basic defaults
+    :BackgroundColour '=FF=FF=FF=00'
+    :TextCHook 10
+    :TextColour '=00=00=00=00'
+    :Font "rec://font/uk1"
+    :FontAttributes "plain.26.32.0"
+}
+
